@@ -43,6 +43,8 @@
             this.blacklistTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -78,7 +80,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 310);
+            this.label3.Location = new System.Drawing.Point(44, 396);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(391, 31);
             this.label3.TabIndex = 7;
@@ -86,7 +88,7 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(283, 355);
+            this.treeView1.Location = new System.Drawing.Point(282, 441);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "Node1";
             treeNode1.Text = "facebook.com";
@@ -106,11 +108,35 @@
             this.treeView1.Size = new System.Drawing.Size(243, 149);
             this.treeView1.TabIndex = 8;
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Social media",
+            "Gaming",
+            "NSFW",
+            "Other"});
+            this.checkedListBox1.Location = new System.Drawing.Point(479, 254);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(228, 123);
+            this.checkedListBox1.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(304, 326);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 41);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Submit";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // blacklist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 537);
+            this.ClientSize = new System.Drawing.Size(800, 617);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.blacklistTextBox);
@@ -129,5 +155,7 @@
         private System.Windows.Forms.TextBox blacklistTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
