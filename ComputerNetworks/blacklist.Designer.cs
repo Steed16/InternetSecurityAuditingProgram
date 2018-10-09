@@ -28,23 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("facebook.com");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("twitter.com");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Social Media", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("ninjakiwi.com");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("coolmathgames.com");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Gaming", new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Social media");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Gaming");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("NSFW");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Other");
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.blacklistTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.catagoryCheckList = new System.Windows.Forms.CheckedListBox();
+            this.blacklistButton = new System.Windows.Forms.Button();
+            this.tagNameInput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -69,12 +64,13 @@
             // 
             // blacklistTextBox
             // 
-            this.blacklistTextBox.Location = new System.Drawing.Point(118, 254);
+            this.blacklistTextBox.Location = new System.Drawing.Point(50, 320);
+            this.blacklistTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.blacklistTextBox.Multiline = true;
             this.blacklistTextBox.Name = "blacklistTextBox";
-            this.blacklistTextBox.Size = new System.Drawing.Size(317, 40);
+            this.blacklistTextBox.Size = new System.Drawing.Size(277, 40);
             this.blacklistTextBox.TabIndex = 6;
-            this.blacklistTextBox.Text = "Enter Here";
+            this.blacklistTextBox.Text = "Enter URL Here";
             // 
             // label3
             // 
@@ -88,62 +84,81 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(282, 441);
+            this.treeView1.Location = new System.Drawing.Point(283, 441);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Node1";
-            treeNode1.Text = "facebook.com";
-            treeNode2.Name = "Node2";
-            treeNode2.Text = "twitter.com";
-            treeNode3.Name = "Node0";
-            treeNode3.Text = "Social Media";
-            treeNode4.Name = "Node4";
-            treeNode4.Text = "ninjakiwi.com";
-            treeNode5.Name = "Node6";
-            treeNode5.Text = "coolmathgames.com";
-            treeNode6.Name = "Node3";
-            treeNode6.Text = "Gaming";
+            treeNode1.Name = "Social media";
+            treeNode1.Tag = "parent";
+            treeNode1.Text = "Social media";
+            treeNode2.Name = "Gaming";
+            treeNode2.Tag = "parent";
+            treeNode2.Text = "Gaming";
+            treeNode3.Name = "NSFW";
+            treeNode3.Tag = "parent";
+            treeNode3.Text = "NSFW";
+            treeNode4.Name = "Other";
+            treeNode4.Tag = "parent";
+            treeNode4.Text = "Other";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
             treeNode3,
-            treeNode6});
+            treeNode4});
             this.treeView1.Size = new System.Drawing.Size(243, 149);
             this.treeView1.TabIndex = 8;
             // 
-            // checkedListBox1
+            // catagoryCheckList
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.catagoryCheckList.FormattingEnabled = true;
+            this.catagoryCheckList.Items.AddRange(new object[] {
             "Social media",
             "Gaming",
             "NSFW",
             "Other"});
-            this.checkedListBox1.Location = new System.Drawing.Point(479, 254);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(228, 123);
-            this.checkedListBox1.TabIndex = 9;
+            this.catagoryCheckList.Location = new System.Drawing.Point(479, 254);
+            this.catagoryCheckList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.catagoryCheckList.Name = "catagoryCheckList";
+            this.catagoryCheckList.Size = new System.Drawing.Size(228, 106);
+            this.catagoryCheckList.TabIndex = 9;
             // 
-            // button1
+            // blacklistButton
             // 
-            this.button1.Location = new System.Drawing.Point(304, 326);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 41);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.blacklistButton.Location = new System.Drawing.Point(347, 320);
+            this.blacklistButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.blacklistButton.Name = "blacklistButton";
+            this.blacklistButton.Size = new System.Drawing.Size(111, 41);
+            this.blacklistButton.TabIndex = 10;
+            this.blacklistButton.Text = "Submit";
+            this.blacklistButton.UseVisualStyleBackColor = true;
+            this.blacklistButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tagNameInput
+            // 
+            this.tagNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tagNameInput.Location = new System.Drawing.Point(50, 254);
+            this.tagNameInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tagNameInput.Name = "tagNameInput";
+            this.tagNameInput.Size = new System.Drawing.Size(211, 22);
+            this.tagNameInput.TabIndex = 11;
+            this.tagNameInput.Text = "Enter TagName Here";
             // 
             // blacklist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 617);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.tagNameInput);
+            this.Controls.Add(this.blacklistButton);
+            this.Controls.Add(this.catagoryCheckList);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.blacklistTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "blacklist";
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.blacklist_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +170,8 @@
         private System.Windows.Forms.TextBox blacklistTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckedListBox catagoryCheckList;
+        private System.Windows.Forms.Button blacklistButton;
+        private System.Windows.Forms.TextBox tagNameInput;
     }
 }

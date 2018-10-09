@@ -12,6 +12,10 @@ namespace ComputerNetworks
 {
     public partial class whitelist : Form
     {
+
+        public static TreeView bList = new TreeView();
+        
+
         public whitelist()
         {
             InitializeComponent();
@@ -19,12 +23,30 @@ namespace ComputerNetworks
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            bList = treeView1;
+            WebMethods.XmlReader();
+        }
 
+        private void removeFromBlacklist(object sender, MouseEventArgs e)
+        {
+            TreeNode node = bList.SelectedNode;
+
+
+            if (bList.SelectedNode.Tag != "parent")
+            {
+                bList.Nodes.Remove(node);
+                WebMethods.XmlRemove();
+            }
+            else
+            {
+                MessageBox.Show("You cannot remove a category! To edit categories, access the \"______\" menu");
+            }
+            
         }
     }
 }

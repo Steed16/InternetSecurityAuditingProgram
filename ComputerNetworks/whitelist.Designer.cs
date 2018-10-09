@@ -28,16 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("facebook.com");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("twitter.com");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Social Media", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("ninjakiwi.com");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("coolmathgames.com");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Gaming", new System.Windows.Forms.TreeNode[] {
-            treeNode10,
-            treeNode11});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Social media");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Gaming");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("NSFW");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Other");
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -65,27 +59,31 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(261, 248);
+            this.treeView1.Location = new System.Drawing.Point(265, 247);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treeView1.Name = "treeView1";
-            treeNode7.Name = "Node1";
-            treeNode7.Text = "facebook.com";
-            treeNode8.Name = "Node2";
-            treeNode8.Text = "twitter.com";
-            treeNode9.Name = "Node0";
-            treeNode9.Text = "Social Media";
-            treeNode10.Name = "Node4";
-            treeNode10.Text = "ninjakiwi.com";
-            treeNode11.Name = "Node6";
-            treeNode11.Text = "coolmathgames.com";
-            treeNode12.Name = "Node3";
-            treeNode12.Text = "Gaming";
+            treeNode1.Name = "Social media";
+            treeNode1.Tag = "parent";
+            treeNode1.Text = "Social media";
+            treeNode2.Name = "Gaming";
+            treeNode2.Tag = "parent";
+            treeNode2.Text = "Gaming";
+            treeNode3.Name = "NSFW";
+            treeNode3.Tag = "parent";
+            treeNode3.Text = "NSFW";
+            treeNode4.Name = "Other";
+            treeNode4.Tag = "parent";
+            treeNode4.Text = "Other";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode12});
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4});
             this.treeView1.Size = new System.Drawing.Size(243, 149);
             this.treeView1.TabIndex = 3;
+            this.treeView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.removeFromBlacklist);
             // 
-            // Form2
+            // whitelist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,7 +91,8 @@
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "whitelist";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
