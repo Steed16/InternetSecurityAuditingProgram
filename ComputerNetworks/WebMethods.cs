@@ -17,28 +17,29 @@ namespace ComputerNetworks
             XmlDocument doc = new XmlDocument();
             doc.Load(@"C:\Users\steed\Desktop\text.xml");
             XmlNodeList nodeList = doc.DocumentElement.SelectNodes("/Blacklisted/Website");
-            string category = ""; string site = "";
+            string category = ""; string site = ""; string tagName = "";
 
             foreach (XmlNode node in nodeList)
             {
+                tagName = node.SelectSingleNode("TagName").InnerText;
                 category = node.SelectSingleNode("Category").InnerText;
                 site = node.SelectSingleNode("URL").InnerText;
 
                 if (category == "Social media")
                 {
-                    whitelist.bList.Nodes["Social media"].Nodes.Add(site);
+                    whitelist.bList.Nodes["Social media"].Nodes.Add(tagName);
                 }
                 else if (category == "Gaming")
                 {
-                    whitelist.bList.Nodes["Gaming"].Nodes.Add(site);
+                    whitelist.bList.Nodes["Gaming"].Nodes.Add(tagName);
                 }
                 else if (category == "NSFW")
                 {
-                    whitelist.bList.Nodes["NSFW"].Nodes.Add(site);
+                    whitelist.bList.Nodes["NSFW"].Nodes.Add(tagName);
                 }
                 else if (category == "Other")
                 {
-                    whitelist.bList.Nodes["Other"].Nodes.Add(site);
+                    whitelist.bList.Nodes["Other"].Nodes.Add(tagName);
                 }
             }
         }
@@ -48,38 +49,39 @@ namespace ComputerNetworks
             XmlDocument doc = new XmlDocument();
             doc.Load(@"C:\Users\steed\Desktop\text.xml");
             var nodeList = doc.DocumentElement.SelectNodes("/Blacklisted/Website");
-            string category = ""; string site = "";
-
+            string category = ""; string site = ""; string tagName = "";
+            
             foreach (XmlNode node in nodeList)
             {
+                tagName = node.SelectSingleNode("TagName").InnerText;
                 category = node.SelectSingleNode("Category").InnerText;
                 site = node.SelectSingleNode("URL").InnerText;
 
                 if (category == "Social media")
                 {
 
-                    XmlNodeList nodes = doc.GetElementsByTagName(site);
+                    XmlNodeList nodes = doc.GetElementsByTagName(tagName);
 
                     node.ParentNode.RemoveChild(node);
                     doc.Save(@"C:\Users\steed\Desktop\text.xml");
                 }
-                else if (category == "Gaming")
+                if (category == "Gaming")
                 {
-                    XmlNodeList nodes = doc.GetElementsByTagName(site);
+                    XmlNodeList nodes = doc.GetElementsByTagName(tagName);
 
                     node.ParentNode.RemoveChild(node);
                     doc.Save(@"C:\Users\steed\Desktop\text.xml");
                 }
-                else if (category == "NSFW")
+                if (category == "NSFW")
                 {
-                    XmlNodeList nodes = doc.GetElementsByTagName(site);
+                    XmlNodeList nodes = doc.GetElementsByTagName(tagName);
 
                     node.ParentNode.RemoveChild(node);
                     doc.Save(@"C:\Users\steed\Desktop\text.xml");
                 }
-                else if (category == "Other")
+                if (category == "Other")
                 {
-                    XmlNodeList nodes = doc.GetElementsByTagName(site);
+                    XmlNodeList nodes = doc.GetElementsByTagName(tagName);
 
                     node.ParentNode.RemoveChild(node);
                     doc.Save(@"C:\Users\steed\Desktop\text.xml");

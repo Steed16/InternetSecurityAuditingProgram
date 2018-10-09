@@ -23,13 +23,12 @@ namespace ComputerNetworks
         {
             string site = blacklistTextBox.ToString().Substring(blacklistTextBox.ToString().LastIndexOf(':') + 1);
             string category = catagoryCheckList.SelectedItem.ToString().Substring(catagoryCheckList.ToString().LastIndexOf('=') + 1);
-            string tagName = tagNameInput.ToString().Substring(tagNameInput.ToString().LastIndexOf(':') + 1).Substring();
-
-            MessageBox.Show(tagName);
-
+            string tagName = tagNameInput.ToString().Substring(tagNameInput.ToString().LastIndexOf('.') + 1);
+            
             XDocument doc = XDocument.Load(@"C:\Users\steed\Desktop\text.xml");
             XElement root = doc.Element("Blacklisted");
-            root.Add(new XElement(tagName,
+            root.Add(new XElement("Website",
+                     new XElement("TagName", tagName),
                      new XElement("Category", category),
                      new XElement("URL", site)));
             doc.Save(@"C:\Users\steed\Desktop\text.xml");
