@@ -21,28 +21,24 @@ namespace ComputerNetworks
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string cite = blacklistTextBox.ToString().Substring(blacklistTextBox.ToString().LastIndexOf(':') + 1);
+            string site = blacklistTextBox.ToString().Substring(blacklistTextBox.ToString().LastIndexOf(':') + 1);
             string category = catagoryCheckList.SelectedItem.ToString().Substring(catagoryCheckList.ToString().LastIndexOf('=') + 1);
-
-            //using (XmlWriter writer = XmlWriter.Create(@"C:\Users\Steed16\Desktop\text.xml"))
-            //{
-            //    writer.WriteStartDocument();
-            //    writer.WriteStartElement("Blacklisted");
-
-            //    writer.WriteStartElement("Website");
-            //    writer.WriteElementString("Category", category);
-            //    writer.WriteElementString("URL", cite);
-
-            //    writer.WriteEndElement();
-            //    writer.Flush();
-            //}
-
-            XDocument doc = XDocument.Load(@"C:\Users\Steed16\Desktop\text.xml");
+            string tagName = tagNameInput.ToString().Substring(tagNameInput.ToString().LastIndexOf('.') + 1);
+            
+            XDocument doc = XDocument.Load(@"C:\Users\steed\Desktop\text.xml");
             XElement root = doc.Element("Blacklisted");
             root.Add(new XElement("Website",
+                     new XElement("TagName", tagName),
                      new XElement("Category", category),
-                     new XElement("URL", cite)));
-            doc.Save(@"C:\Users\Steed16\Desktop\text.xml");
+                     new XElement("URL", site)));
+            doc.Save(@"C:\Users\steed\Desktop\text.xml");
+            MessageBox.Show("You Blacklisted '" + tagName + "' under the category " + category);
+        }
+
+        private void blacklist_Load(object sender, EventArgs e)
+        {
+            whitelist.bList = treeView1;
+            WebMethods.XmlReader();
         }
     }
 }
