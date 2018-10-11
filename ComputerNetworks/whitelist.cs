@@ -48,20 +48,5 @@ namespace ComputerNetworks
             }
             
         }
-
-        private void removeFromBlacklist(object sender, MouseEventArgs e)
-        {
-            TreeNode node = treeView1.SelectedNode;
-
-            if (treeView1.SelectedNode.Tag != "parent")
-            {
-                treeView1.Nodes.Remove(node);
-            }
-            else
-            {
-                MessageBox.Show("You cannot remove a category! To edit categories, access the \"______\" menu");
-            }
-            
-        }
     }
 }
