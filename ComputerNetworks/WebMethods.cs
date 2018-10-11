@@ -37,48 +37,54 @@ namespace ComputerNetworks
             }
         }
 
-        public static void XmlRemove()
+        public static void XmlRemove(TreeNode treeNode)
         {
+            string category = ""; string site = ""; string tagName = "";
             XmlDocument doc = new XmlDocument();
             doc.Load(@"C:\Users\steed\Desktop\text.xml");
             var nodeList = doc.DocumentElement.SelectNodes("/Blacklisted/Website");
-            string category = ""; string site = ""; string tagName = "";
 
-            XmlNode node = new XmlNode(nodeList);
-
-            tagName = node.SelectSingleNode("TagName").InnerText;
-            category = node.SelectSingleNode("Category").InnerText;
-            site = node.SelectSingleNode("URL").InnerText;
-
-            if (category == "Social media")
+            foreach (XmlNode node in nodeList)
             {
-                XmlNodeList nodes = doc.GetElementsByTagName(tagName);
+                tagName = node.SelectSingleNode("TagName").InnerText.ToString();
+                category = node.SelectSingleNode("Category").InnerText;
+                site = node.SelectSingleNode("URL").InnerText;
 
-                node.ParentNode.RemoveChild(node);
-                doc.Save(@"C:\Users\steed\Desktop\text.xml");
-            }
-            if (category == "Gaming")
-            {
-                XmlNodeList nodes = doc.GetElementsByTagName(tagName);
+                if (tagName == treeNode.Text)
+                {
+                    if (category == "Social media")
+                    {
+                        XmlNodeList nodes = doc.GetElementsByTagName(tagName);
 
-                node.ParentNode.RemoveChild(node);
-                doc.Save(@"C:\Users\steed\Desktop\text.xml");
-            }
-            if (category == "NSFW")
-            {
-                XmlNodeList nodes = doc.GetElementsByTagName(tagName);
+                        node.ParentNode.RemoveChild(node);
+                        doc.Save(@"C:\Users\steed\Desktop\text.xml");
+                    }
+                    if (category == "Gaming")
+                    {
+                        XmlNodeList nodes = doc.GetElementsByTagName(tagName);
 
-                node.ParentNode.RemoveChild(node);
-                doc.Save(@"C:\Users\steed\Desktop\text.xml");
-            }
-            if (category == "Other")
-            {
-                XmlNodeList nodes = doc.GetElementsByTagName(tagName);
+                        node.ParentNode.RemoveChild(node);
+                        doc.Save(@"C:\Users\steed\Desktop\text.xml");
+                    }
+                    if (category == "NSFW")
+                    {
+                        XmlNodeList nodes = doc.GetElementsByTagName(tagName);
 
-                node.ParentNode.RemoveChild(node);
-                doc.Save(@"C:\Users\steed\Desktop\text.xml");
+                        node.ParentNode.RemoveChild(node);
+                        doc.Save(@"C:\Users\steed\Desktop\text.xml");
+                    }
+                    if (category == "Other")
+                    {
+                        XmlNodeList nodes = doc.GetElementsByTagName(tagName);
+
+                        node.ParentNode.RemoveChild(node);
+                        doc.Save(@"C:\Users\steed\Desktop\text.xml");
+                    }
+                    MessageBox.Show("You hav removed '" + site + "' from being blacklisted");
+                }
             }
-            MessageBox.Show("You hav removed '" + site + "' from being blacklisted");
+
+            
         }
     }
 }

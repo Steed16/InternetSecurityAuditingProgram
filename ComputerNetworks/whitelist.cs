@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace ComputerNetworks
 {
@@ -34,19 +35,19 @@ namespace ComputerNetworks
 
         private void removeFromBlacklist(object sender, MouseEventArgs e)
         {
-            TreeNode node = bList.SelectedNode;
-
+            TreeNode treeNode = bList.SelectedNode;
 
             if (bList.SelectedNode.Tag != "parent")
             {
-                bList.Nodes.Remove(node);
-                WebMethods.XmlRemove();
+                WebMethods.XmlRemove(treeNode);
+                bList.Nodes.Remove(treeNode);
             }
+
             else
             {
                 MessageBox.Show("You cannot remove a category! To edit categories, access the \"______\" menu");
             }
-            
+                        
         }
     }
 }
