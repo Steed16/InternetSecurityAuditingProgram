@@ -34,3 +34,4 @@ C:\Users\Steed16\Source\Repos\InternetSecurityAuditingProgram\ComputerNetworks\o
 C:\Users\Steed16\Source\Repos\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.csproj.CoreCompileInputs.cache
 C:\Users\Steed16\Source\Repos\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.exe
 C:\Users\Steed16\Source\Repos\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.pdb
+C:\Users\steed\Source\Repos\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.AdminLogin.resources

@@ -11,7 +11,7 @@ namespace ComputerNetworks
             doc.Load(@"C:\Users\steed\Desktop\text.xml");
             XmlNodeList nodeList = doc.DocumentElement.SelectNodes("/Blacklisted/Website");
             string category = ""; string site = ""; string tagName = "";
-
+            
             foreach (XmlNode node in nodeList)
             {
                 tagName = node.SelectSingleNode("TagName").InnerText;

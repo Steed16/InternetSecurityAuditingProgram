@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Social media");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Gaming");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("NSFW");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Other");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Social media");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Gaming");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("NSFW");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Other");
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.blacklistTextBox = new System.Windows.Forms.TextBox();
@@ -87,23 +87,23 @@
             this.treeView1.Location = new System.Drawing.Point(283, 441);
             this.treeView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Social media";
-            treeNode1.Tag = "parent";
-            treeNode1.Text = "Social media";
-            treeNode2.Name = "Gaming";
-            treeNode2.Tag = "parent";
-            treeNode2.Text = "Gaming";
-            treeNode3.Name = "NSFW";
-            treeNode3.Tag = "parent";
-            treeNode3.Text = "NSFW";
-            treeNode4.Name = "Other";
-            treeNode4.Tag = "parent";
-            treeNode4.Text = "Other";
+            treeNode5.Name = "Social media";
+            treeNode5.Tag = "parent";
+            treeNode5.Text = "Social media";
+            treeNode6.Name = "Gaming";
+            treeNode6.Tag = "parent";
+            treeNode6.Text = "Gaming";
+            treeNode7.Name = "NSFW";
+            treeNode7.Tag = "parent";
+            treeNode7.Text = "NSFW";
+            treeNode8.Name = "Other";
+            treeNode8.Tag = "parent";
+            treeNode8.Text = "Other";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4});
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8});
             this.treeView1.Size = new System.Drawing.Size(243, 149);
             this.treeView1.TabIndex = 8;
             // 
@@ -115,7 +115,7 @@
             "Gaming",
             "NSFW",
             "Other"});
-            this.catagoryCheckList.Location = new System.Drawing.Point(479, 254);
+            this.catagoryCheckList.Location = new System.Drawing.Point(333, 255);
             this.catagoryCheckList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.catagoryCheckList.Name = "catagoryCheckList";
             this.catagoryCheckList.Size = new System.Drawing.Size(228, 106);
@@ -123,7 +123,7 @@
             // 
             // blacklistButton
             // 
-            this.blacklistButton.Location = new System.Drawing.Point(347, 320);
+            this.blacklistButton.Location = new System.Drawing.Point(618, 287);
             this.blacklistButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.blacklistButton.Name = "blacklistButton";
             this.blacklistButton.Size = new System.Drawing.Size(111, 41);
@@ -135,10 +135,12 @@
             // tagNameInput
             // 
             this.tagNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tagNameInput.Location = new System.Drawing.Point(50, 254);
+            this.tagNameInput.Location = new System.Drawing.Point(50, 255);
             this.tagNameInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tagNameInput.MaximumSize = new System.Drawing.Size(277, 40);
+            this.tagNameInput.MinimumSize = new System.Drawing.Size(277, 40);
             this.tagNameInput.Name = "tagNameInput";
-            this.tagNameInput.Size = new System.Drawing.Size(211, 22);
+            this.tagNameInput.Size = new System.Drawing.Size(277, 40);
             this.tagNameInput.TabIndex = 11;
             this.tagNameInput.Text = "Enter TagName Here";
             // 

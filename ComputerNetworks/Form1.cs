@@ -10,17 +10,20 @@ namespace ComputerNetworks
             InitializeComponent();
         }
 
-        whitelist whitelist = new whitelist();
-        blacklist blacklist = new blacklist();
+        public static string whichOne = "";
 
         private void button1_Click(object sender, EventArgs e)
         {
-            whitelist.Show();
+            whichOne = "whitelist";
+            AdminLogin blackLogin = new AdminLogin();
+            blackLogin.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            blacklist.Show();
+            whichOne = "blacklist";
+            AdminLogin blackLogin = new AdminLogin();
+            blackLogin.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
