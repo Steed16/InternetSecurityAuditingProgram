@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace ComputerNetworks
 {
-    public partial class Form1 : Form
+    public partial class PowerScreen : Form
     {
-        public Form1()
+        public PowerScreen()
         {
             InitializeComponent();
         }
