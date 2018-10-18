@@ -23,12 +23,12 @@ namespace ComputerNetworks
             if (textUsername.Text == "Admin" && textPassword.Text == "admin1")
             {
                 ActiveForm.Close();
-                if (Form1.whichOne == "blacklist")
+                if (PowerScreen.whichOne == "blacklist")
                 {
                     blacklist blackForm = new blacklist();
                     blackForm.Show();
                 }
-                else if (Form1.whichOne == "whitelist")
+                else if (PowerScreen.whichOne == "whitelist")
                 {
                     whitelist whiteForm = new whitelist();
                     whiteForm.Show();
@@ -39,7 +39,7 @@ namespace ComputerNetworks
             {
                 SoundPlayer player = new SoundPlayer();
                 player.Stop();
-                player.SoundLocation = @"C:\Users\steed\Downloads\Noot Noot.wav";
+                player.SoundLocation = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Noot Noot.wav";
                 player.Play();
                 MessageBox.Show("Incorrect Username or Password");
                 

@@ -52,11 +52,12 @@
     <Compile Include="AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Database.cs" />
+    <Compile Include="PowerScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PowerScreen.Designer.cs">
+      <DependentUpon>PowerScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="WebMethods.cs" />
     <Compile Include="whitelist.cs">
@@ -76,8 +77,8 @@
     <EmbeddedResource Include="AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="PowerScreen.resx">
+      <DependentUpon>PowerScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="whitelist.resx">
       <DependentUpon>whitelist.cs</DependentUpon>

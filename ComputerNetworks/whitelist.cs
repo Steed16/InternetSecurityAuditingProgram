@@ -37,7 +37,7 @@ namespace ComputerNetworks
         {
             TreeNode treeNode = bList.SelectedNode;
 
-            if (bList.SelectedNode.Tag != "parent")
+            if (bList.SelectedNode.Text != "parent")
             {
                 WebMethods.XmlRemove(treeNode);
                 bList.Nodes.Remove(treeNode);
