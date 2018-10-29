@@ -31,19 +31,19 @@ namespace ComputerNetworks
 
                 if (category == "Social Media")
                 {
-                    whitelist.bList.Nodes["Social Media"].Nodes.Add(tagName);
+                    whitelist.BlackListView.Nodes["Social Media"].Nodes.Add(tagName);
                 }
                 else if (category == "Gaming")
                 {
-                    whitelist.bList.Nodes["Gaming"].Nodes.Add(tagName);
+                    whitelist.BlackListView.Nodes["Gaming"].Nodes.Add(tagName);
                 }
                 else if (category == "NSFW")
                 {
-                    whitelist.bList.Nodes["NSFW"].Nodes.Add(tagName);
+                    whitelist.BlackListView.Nodes["NSFW"].Nodes.Add(tagName);
                 }
                 else if (category == "Other")
                 {
-                    whitelist.bList.Nodes["Other"].Nodes.Add(tagName);
+                    whitelist.BlackListView.Nodes["Other"].Nodes.Add(tagName);
                 }
             }
         }
@@ -64,7 +64,7 @@ namespace ComputerNetworks
 
             foreach (XmlNode node in nodeList)
             {
-                tagName = node.SelectSingleNode("TagName").InnerText.ToString();
+                tagName = node.SelectSingleNode("TagName").InnerText;
                 category = node.SelectSingleNode("Category").InnerText;
                 site = node.SelectSingleNode("URL").InnerText;
 
@@ -101,8 +101,6 @@ namespace ComputerNetworks
                     MessageBox.Show("You hav removed '" + site + "' from being blacklisted");
                 }
             }
-
-
         }
     }
 }

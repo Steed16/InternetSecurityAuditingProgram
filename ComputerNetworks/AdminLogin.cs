@@ -18,17 +18,17 @@ namespace ComputerNetworks
             InitializeComponent();
         }
         
-        private void submit_Click(object sender, EventArgs e)
+        private void Submit_Click(object sender, EventArgs e)
         {
             if (textUsername.Text == "Admin" && textPassword.Text == "admin1")
             {
                 ActiveForm.Close();
-                if (PowerScreen.whichOne == "blacklist")
+                if (PowerScreen.ButtonClicked == "blacklist")
                 {
                     blacklist blackForm = new blacklist();
                     blackForm.Show();
                 }
-                else if (PowerScreen.whichOne == "whitelist")
+                else if (PowerScreen.ButtonClicked == "whitelist")
                 {
                     whitelist whiteForm = new whitelist();
                     whiteForm.Show();

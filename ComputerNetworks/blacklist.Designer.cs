@@ -34,7 +34,7 @@
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Other");
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.blacklistTextBox = new System.Windows.Forms.TextBox();
+            this.blacklistSiteTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.blacklistButton = new System.Windows.Forms.Button();
@@ -70,13 +70,13 @@
             // 
             // blacklistTextBox
             // 
-            this.blacklistTextBox.Location = new System.Drawing.Point(38, 260);
-            this.blacklistTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.blacklistTextBox.Multiline = true;
-            this.blacklistTextBox.Name = "blacklistTextBox";
-            this.blacklistTextBox.Size = new System.Drawing.Size(209, 33);
-            this.blacklistTextBox.TabIndex = 6;
-            this.blacklistTextBox.Text = "Enter URL Here";
+            this.blacklistSiteTextBox.Location = new System.Drawing.Point(38, 260);
+            this.blacklistSiteTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.blacklistSiteTextBox.Multiline = true;
+            this.blacklistSiteTextBox.Name = "blacklistTextBox";
+            this.blacklistSiteTextBox.Size = new System.Drawing.Size(209, 33);
+            this.blacklistSiteTextBox.TabIndex = 6;
+            this.blacklistSiteTextBox.Text = "Enter URL Here";
             // 
             // label3
             // 
@@ -123,7 +123,7 @@
             this.blacklistButton.TabIndex = 10;
             this.blacklistButton.Text = "Submit";
             this.blacklistButton.UseVisualStyleBackColor = true;
-            this.blacklistButton.Click += new System.EventHandler(this.button1_Click);
+            this.blacklistButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // tagNameInput
             // 
@@ -147,7 +147,7 @@
             this.socialMediaRadio.TabStop = true;
             this.socialMediaRadio.Text = "Social Media";
             this.socialMediaRadio.UseVisualStyleBackColor = true;
-            this.socialMediaRadio.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.socialMediaRadio.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // gamingRadio
             // 
@@ -159,7 +159,7 @@
             this.gamingRadio.TabStop = true;
             this.gamingRadio.Text = "Gaming";
             this.gamingRadio.UseVisualStyleBackColor = true;
-            this.gamingRadio.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.gamingRadio.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // nsfwRadio
             // 
@@ -171,7 +171,7 @@
             this.nsfwRadio.TabStop = true;
             this.nsfwRadio.Text = "NSFW";
             this.nsfwRadio.UseVisualStyleBackColor = true;
-            this.nsfwRadio.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.nsfwRadio.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // otherRadio
             // 
@@ -183,7 +183,7 @@
             this.otherRadio.TabStop = true;
             this.otherRadio.Text = "Other";
             this.otherRadio.UseVisualStyleBackColor = true;
-            this.otherRadio.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.otherRadio.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // selectedCategory
             // 
@@ -209,13 +209,13 @@
             this.Controls.Add(this.blacklistButton);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.blacklistTextBox);
+            this.Controls.Add(this.blacklistSiteTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "blacklist";
             this.Text = "Blacklist";
-            this.Load += new System.EventHandler(this.blacklist_Load);
+            this.Load += new System.EventHandler(this.Blacklist_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,7 +224,7 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox blacklistTextBox;
+        private System.Windows.Forms.TextBox blacklistSiteTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button blacklistButton;
