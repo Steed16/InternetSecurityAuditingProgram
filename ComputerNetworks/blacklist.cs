@@ -24,7 +24,7 @@ namespace ComputerNetworks
             string site = blacklistSiteTextBox.Text;
             string category = selectedCategory.Text;
             string tagName = tagNameInput.Text;
-
+            /*
             XDocument doc = null;
             try
             {
@@ -40,7 +40,20 @@ namespace ComputerNetworks
                      new XElement("Category", category),
                      new XElement("URL", site)));
             doc.Save(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\text.xml");
-            MessageBox.Show("You Blacklisted '" + tagName + "' under the category " + category);
+            */
+            Database.BlacklistWebsiteAsync(tagName, category, site).ContinueWith(task =>
+            {
+                string result = task.Result;
+                bool res = Boolean.Parse(result.ToString());
+                if (res)
+                {
+                    MessageBox.Show("You Blacklisted '" + tagName + "' under the category " + category);
+                }
+                else
+                {
+                    MessageBox.Show("An error occurred, '" + site + "' was not added to the blacklist.");
+                }
+            });
         }
 
         private void Blacklist_Load(object sender, EventArgs e)

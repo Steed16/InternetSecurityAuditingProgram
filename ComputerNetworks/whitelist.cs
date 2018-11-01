@@ -37,12 +37,11 @@ namespace ComputerNetworks
         {
             TreeNode treeNode = BlackListView.SelectedNode;
 
-            if (BlackListView.SelectedNode.Text != "parent")
+            if (BlackListView.SelectedNode.Tag == null)
             {
                 WebMethods.XmlRemove(treeNode);
                 BlackListView.Nodes.Remove(treeNode);
             }
-
             else
             {
                 MessageBox.Show("You cannot remove a category! To edit categories, access the \"______\" menu");

@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Net.Http;
 using System.Windows.Forms;
 
 namespace ComputerNetworks
 {
     public partial class PowerScreen : Form
     {
+        public static readonly HttpClient client = new HttpClient();
+
         public PowerScreen()
         {
+            client.DefaultRequestHeaders.Add("X-PowerScreen", "1");
+
             InitializeComponent();
         }
 
