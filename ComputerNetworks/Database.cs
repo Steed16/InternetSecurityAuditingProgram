@@ -11,7 +11,7 @@ namespace ComputerNetworks
     class Database
     {
 
-        private static string BlacklistUrl = "http://isap.austin.com/blacklist.php";
+        private static string BlacklistUrl = "http://isap.ahabedank.com/blacklist.php";
 
         public static XmlDocument GetBlacklistedWebsites()
         {
