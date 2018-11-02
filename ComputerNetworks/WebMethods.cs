@@ -2,12 +2,15 @@
 using System.IO;
 using System.Windows.Forms;
 using System.Xml;
+using System.Web;
+using System.Net.Http;
 
 namespace ComputerNetworks
 {
     internal class WebMethods
     {
         static string xmlPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\text.xml";
+        
 
         public static void XmlReader()
         {
