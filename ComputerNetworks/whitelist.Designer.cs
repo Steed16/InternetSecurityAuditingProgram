@@ -83,7 +83,7 @@
             treeNode4});
             this.treeView1.Size = new System.Drawing.Size(183, 122);
             this.treeView1.TabIndex = 3;
-            this.treeView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.removeFromBlacklist);
+            this.treeView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.RemoveFromBlacklist);
             // 
             // whitelist
             // 

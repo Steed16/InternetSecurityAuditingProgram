@@ -19,9 +19,9 @@ namespace ComputerNetworks
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            string site = blacklistTextBox.Text;
+            string site = blacklistSiteTextBox.Text;
             string category = selectedCategory.Text;
             string tagName = tagNameInput.Text;
 
@@ -29,7 +29,8 @@ namespace ComputerNetworks
             try
             {
                 doc = XDocument.Load(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\text.xml");
-            } catch (Exception)
+            }
+            catch (Exception)
             {
                 doc = new XDocument(new XElement("Blacklisted"));
             }
@@ -42,17 +43,17 @@ namespace ComputerNetworks
             MessageBox.Show("You Blacklisted '" + tagName + "' under the category " + category);
         }
 
-        private void blacklist_Load(object sender, EventArgs e)
+        private void Blacklist_Load(object sender, EventArgs e)
         {
-            whitelist.bList = treeView1;
+            whitelist.BlackListView = treeView1;
             WebMethods.XmlReader();
         }
 
-        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (((RadioButton)sender).Checked == true)
             {
-                selectedCategory.Text = ((RadioButton)sender).Text.ToString();
+                selectedCategory.Text = ((RadioButton)sender).Text;
             }
         }
     }

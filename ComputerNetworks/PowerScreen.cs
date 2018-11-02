@@ -10,24 +10,25 @@ namespace ComputerNetworks
             InitializeComponent();
         }
 
-        public static string whichOne = "";
+        public static string ButtonClicked = "";
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button_1_Click(object sender, EventArgs e)
         {
-            whichOne = "whitelist";
+            ButtonClicked = "whitelist";
             AdminLogin blackLogin = new AdminLogin();
             blackLogin.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button_2_Click(object sender, EventArgs e)
         {
-            whichOne = "blacklist";
+            ButtonClicked = "blacklist";
             AdminLogin blackLogin = new AdminLogin();
             blackLogin.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button_3_Click(object sender, EventArgs e)
         {
+            ButtonClicked = "options";
             MessageBox.Show("Who do you think we are??? Who need options noob!");
         }
     }

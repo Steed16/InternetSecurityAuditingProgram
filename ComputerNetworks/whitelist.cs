@@ -14,7 +14,7 @@ namespace ComputerNetworks
     public partial class whitelist : Form
     {
 
-        public static TreeView bList = new TreeView();
+        public static TreeView BlackListView = new TreeView();
         
 
         public whitelist()
@@ -22,25 +22,25 @@ namespace ComputerNetworks
             InitializeComponent();
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void CheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            bList = treeView1;
+            BlackListView = treeView1;
             WebMethods.XmlReader();
         }
 
-        private void removeFromBlacklist(object sender, MouseEventArgs e)
+        private void RemoveFromBlacklist(object sender, MouseEventArgs e)
         {
-            TreeNode treeNode = bList.SelectedNode;
+            TreeNode treeNode = BlackListView.SelectedNode;
 
-            if (bList.SelectedNode.Text != "parent")
+            if (BlackListView.SelectedNode.Text != "parent")
             {
                 WebMethods.XmlRemove(treeNode);
-                bList.Nodes.Remove(treeNode);
+                BlackListView.Nodes.Remove(treeNode);
             }
 
             else
