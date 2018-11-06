@@ -9,11 +9,7 @@ namespace ComputerNetworks
 {
     internal class WebMethods
     {
-<<<<<<< HEAD
-        static string xmlPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\text.xml";
-        
-=======
->>>>>>> austin-yeet
+        static string xmlPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\text.xml";\
 
         public static async void XmlReader()
         {
