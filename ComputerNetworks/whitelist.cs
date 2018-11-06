@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace ComputerNetworks
 {
@@ -39,8 +31,10 @@ namespace ComputerNetworks
 
             if (BlackListView.SelectedNode.Tag == null)
             {
-                WebMethods.XmlRemove(treeNode);
-                BlackListView.Nodes.Remove(treeNode);
+                WebMethods.XmlRemove(treeNode).ContinueWith(res =>
+                 {
+                     if (res.Result) BlackListView.Nodes.Remove(treeNode);
+                 });
             }
             else
             {

@@ -1,15 +1,13 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
 using System.Xml;
-using System.Web;
-using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace ComputerNetworks
 {
     internal class WebMethods
     {
-        static string xmlPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\text.xml";\
+        // static string xmlPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\text.xml";
 
         public static async void XmlReader()
         {
@@ -18,6 +16,11 @@ namespace ComputerNetworks
             XmlNodeList nodeList = doc.DocumentElement.SelectNodes("/Blacklisted/Website");
             string id = "";  string site = "";  string category = "";
 
+            foreach(TreeNode node in whitelist.BlackListView.Nodes)
+            {
+                node.Nodes.Clear();
+            }
+            
             foreach (XmlNode node in nodeList)
             {
                 id = node.SelectSingleNode("ID").InnerText;
@@ -28,9 +31,9 @@ namespace ComputerNetworks
             }
         }
 
-        public static async void XmlRemove(TreeNode treeNode)
+        public static async Task<bool> XmlRemove(TreeNode treeNode)
         {
-            await Database.WhitelistWebsiteAsync(treeNode.Name).ContinueWith(task =>
+            return await Database.WhitelistWebsiteAsync(treeNode.Name).ContinueWith(task =>
             {
                 string result = task.Result;
                 bool res = Boolean.Parse(result.ToString());
@@ -42,6 +45,7 @@ namespace ComputerNetworks
                 {
                     MessageBox.Show("An error occurred. The site '" + treeNode.Text + "' was not removed from the blacklist.");
                 }
+                return res;
             });
         }
     }
