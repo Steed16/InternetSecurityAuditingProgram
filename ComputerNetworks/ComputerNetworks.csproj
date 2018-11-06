@@ -52,6 +52,7 @@
     <Compile Include="AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database.cs" />
     <Compile Include="PowerScreen.cs">
       <SubType>Form</SubType>
     </Compile>

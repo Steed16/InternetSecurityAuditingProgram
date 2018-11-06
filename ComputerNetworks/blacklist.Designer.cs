@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Social media");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Gaming");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("NSFW");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Other");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Social media");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Gaming");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("NSFW");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Other");
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.blacklistSiteTextBox = new System.Windows.Forms.TextBox();
@@ -68,12 +68,12 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Hello human! How would you like to make the \r\ninternet less fun today???";
             // 
-            // blacklistTextBox
+            // blacklistSiteTextBox
             // 
             this.blacklistSiteTextBox.Location = new System.Drawing.Point(38, 260);
             this.blacklistSiteTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.blacklistSiteTextBox.Multiline = true;
-            this.blacklistSiteTextBox.Name = "blacklistTextBox";
+            this.blacklistSiteTextBox.Name = "blacklistSiteTextBox";
             this.blacklistSiteTextBox.Size = new System.Drawing.Size(209, 33);
             this.blacklistSiteTextBox.TabIndex = 6;
             this.blacklistSiteTextBox.Text = "Enter URL Here";
@@ -94,23 +94,23 @@
             this.treeView1.Location = new System.Drawing.Point(212, 358);
             this.treeView1.Margin = new System.Windows.Forms.Padding(2);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Social media";
-            treeNode1.Tag = "parent";
-            treeNode1.Text = "Social media";
-            treeNode2.Name = "Gaming";
-            treeNode2.Tag = "parent";
-            treeNode2.Text = "Gaming";
-            treeNode3.Name = "NSFW";
-            treeNode3.Tag = "parent";
-            treeNode3.Text = "NSFW";
-            treeNode4.Name = "Other";
-            treeNode4.Tag = "parent";
-            treeNode4.Text = "Other";
+            treeNode5.Name = "Social media";
+            treeNode5.Tag = "parent";
+            treeNode5.Text = "Social media";
+            treeNode6.Name = "Gaming";
+            treeNode6.Tag = "parent";
+            treeNode6.Text = "Gaming";
+            treeNode7.Name = "NSFW";
+            treeNode7.Tag = "parent";
+            treeNode7.Text = "NSFW";
+            treeNode8.Name = "Other";
+            treeNode8.Tag = "parent";
+            treeNode8.Text = "Other";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4});
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8});
             this.treeView1.Size = new System.Drawing.Size(183, 122);
             this.treeView1.TabIndex = 8;
             // 
@@ -213,6 +213,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "blacklist";
             this.Text = "Blacklist";
             this.Load += new System.EventHandler(this.Blacklist_Load);

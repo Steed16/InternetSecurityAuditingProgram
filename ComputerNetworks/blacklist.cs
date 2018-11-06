@@ -19,28 +19,26 @@ namespace ComputerNetworks
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private async void Button1_Click(object sender, EventArgs e)
         {
             string site = blacklistSiteTextBox.Text;
             string category = selectedCategory.Text;
             string tagName = tagNameInput.Text;
 
-            XDocument doc = null;
-            try
+            await Database.BlacklistWebsiteAsync(tagName, category, site).ContinueWith(task =>
             {
-                doc = XDocument.Load(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\text.xml");
-            }
-            catch (Exception)
-            {
-                doc = new XDocument(new XElement("Blacklisted"));
-            }
-            XElement root = doc.Element("Blacklisted");
-            root.Add(new XElement("Website",
-                     new XElement("TagName", tagName),
-                     new XElement("Category", category),
-                     new XElement("URL", site)));
-            doc.Save(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\text.xml");
-            MessageBox.Show("You Blacklisted '" + tagName + "' under the category " + category);
+                string result = task.Result;
+                bool res = Boolean.Parse(result.ToString());
+                if (res)
+                {
+                    MessageBox.Show("You Blacklisted '" + site + "' under the category " + category);
+                }
+                else
+                {
+                    MessageBox.Show("An error occurred, '" + site + "' was not added to the blacklist.");
+                }
+            });
+            WebMethods.XmlReader();
         }
 
         private void Blacklist_Load(object sender, EventArgs e)
