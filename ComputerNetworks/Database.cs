@@ -11,14 +11,17 @@ namespace ComputerNetworks
     class Database
     {
 
-        private static string BlacklistUrl = "http://isap.ahabedank.com/blacklist.php";
+        private static readonly string BlacklistUrl = "http://isap.ahabedank.com/blacklist.php";
 
-        public static XmlDocument GetBlacklistedWebsites()
+        public static async Task<XmlDocument> GetBlacklistedWebsites()
         {
             XmlDocument doc = new XmlDocument();
             try
             {
-                doc.Load(BlacklistUrl);
+                HttpResponseMessage res = await PowerScreen.client.GetAsync(BlacklistUrl);
+                string response = await res.Content.ReadAsStringAsync();
+
+                doc.LoadXml(response);
             }
             catch (Exception)
             {
@@ -47,13 +50,11 @@ namespace ComputerNetworks
             return responseString;
         }
 
-        public static async Task<string> WhitelistWebsiteAsync(string tagName, string category, string URL)
+        public static async Task<string> WhitelistWebsiteAsync(string id)
         {
             var values = new Dictionary<string, string>
             {
-                { "tagName", tagName },
-                { "category", category },
-                { "siteUrl", URL },
+                { "id", id },
                 { "action", "whitelist" }
             };
 

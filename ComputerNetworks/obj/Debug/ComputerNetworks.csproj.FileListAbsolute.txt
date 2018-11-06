@@ -61,3 +61,16 @@ C:\Users\austin\Downloads\InternetSecurityAuditingProgram-master\ComputerNetwork
 C:\Users\austin\Downloads\InternetSecurityAuditingProgram-master\ComputerNetworks\obj\Debug\ComputerNetworks.csproj.CoreCompileInputs.cache
 C:\Users\austin\Downloads\InternetSecurityAuditingProgram-master\ComputerNetworks\obj\Debug\ComputerNetworks.exe
 C:\Users\austin\Downloads\InternetSecurityAuditingProgram-master\ComputerNetworks\obj\Debug\ComputerNetworks.pdb
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\bin\Debug\ComputerNetworks.exe.config
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\bin\Debug\ComputerNetworks.exe
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\bin\Debug\ComputerNetworks.pdb
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.csprojAssemblyReference.cache
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.AdminLogin.resources
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.PowerScreen.resources
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.whitelist.resources
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.blacklist.resources
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.Properties.Resources.resources
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.csproj.GenerateResource.cache
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.csproj.CoreCompileInputs.cache
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.exe
+C:\Users\Austin\Documents\GitHub\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.pdb
