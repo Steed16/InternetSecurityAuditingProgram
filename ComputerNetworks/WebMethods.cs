@@ -1,9 +1,6 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
 using System.Xml;
-using System.Web;
-using System.Net.Http;
 
 namespace ComputerNetworks
 {
