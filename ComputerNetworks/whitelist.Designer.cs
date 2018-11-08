@@ -62,7 +62,7 @@
             // treeView1
             // 
             this.treeView1.Location = new System.Drawing.Point(199, 201);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(2);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "Social media";
             treeNode1.Tag = "parent";
@@ -93,7 +93,9 @@
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "whitelist";
             this.Text = "Whitelist";
             this.Load += new System.EventHandler(this.Form2_Load);
