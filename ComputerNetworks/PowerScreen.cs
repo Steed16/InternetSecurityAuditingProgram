@@ -36,5 +36,30 @@ namespace ComputerNetworks
             ButtonClicked = "options";
             MessageBox.Show("Who do you think we are??? Who need options noob!");
         }
+
+        private void PowerScreen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                notifyIcon.Visible = true;
+                notifyIcon.ShowBalloonTip(500);
+                this.Hide();
+                e.Cancel = true;
+            }
+        }
+
+        private void PowerScreen_Resize(object sender, EventArgs e)
+        {
+            if (FormWindowState.Minimized == this.WindowState)
+            {
+                notifyIcon.Visible = true;
+                notifyIcon.ShowBalloonTip(500);
+                this.Hide();
+            }
+            else if (FormWindowState.Normal == this.WindowState)
+            {
+                notifyIcon.Visible = false;
+            }
+        }
     }
 }

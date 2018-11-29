@@ -8,7 +8,30 @@ namespace ComputerNetworks
 {
     class Database
     {
-        private static readonly string BlacklistUrl = "http://isap.ahabedank.com/blacklist.php";
+        public static readonly string BlacklistUrl = "http://isap.ahabedank.com/blacklist.php";
+
+        private static XmlDocument CachedBlacklist { get; set; }
+
+        public static async Task<bool> IsBlacklistedAsync(string website)
+        {
+            if (CachedBlacklist == null)
+            {
+                await GetBlacklistedWebsites();
+            }
+            try
+            {
+                XmlNodeList nodeList = CachedBlacklist.DocumentElement.SelectNodes("/Blacklisted/Website");
+                foreach (XmlNode node in nodeList)
+                {
+                    if (website == node.SelectSingleNode("URL").InnerText) return true;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            return false;
+        }
 
         public static async Task<XmlDocument> GetBlacklistedWebsites()
         {
@@ -24,6 +47,8 @@ namespace ComputerNetworks
             {
                 doc.LoadXml("<BlackListed />");
             }
+
+            CachedBlacklist = doc;
 
             return doc;
         }
