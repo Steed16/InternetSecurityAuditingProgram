@@ -1,94 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
-using System.Xml.Linq;
+using System.Threading.Tasks;
+using System.Web;
+using System.Runtime;
+using Microsoft.AspNetCore.WebApi.Client;
+
+
 
 namespace ComputerNetworks
 {
-    class WebMethods
+    internal class WebMethods
     {
+        // static string xmlPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\text.xml";
 
-        public static void XmlReader()
+        public static async void XmlReader()
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load(@"C:\Users\steed\Desktop\text.xml");
+            XmlDocument doc = await Database.GetBlacklistedWebsites();
+
             XmlNodeList nodeList = doc.DocumentElement.SelectNodes("/Blacklisted/Website");
-            string category = ""; string site = ""; string tagName = "";
+            string id = "";  string site = "";  string category = "";
 
-            foreach (XmlNode node in nodeList)
+            foreach(TreeNode node in whitelist.BlackListView.Nodes)
             {
-                tagName = node.SelectSingleNode("TagName").InnerText;
-                category = node.SelectSingleNode("Category").InnerText;
-                site = node.SelectSingleNode("URL").InnerText;
-
-                if (category == "Social media")
-                {
-                    whitelist.bList.Nodes["Social media"].Nodes.Add(tagName);
-                }
-                else if (category == "Gaming")
-                {
-                    whitelist.bList.Nodes["Gaming"].Nodes.Add(tagName);
-                }
-                else if (category == "NSFW")
-                {
-                    whitelist.bList.Nodes["NSFW"].Nodes.Add(tagName);
-                }
-                else if (category == "Other")
-                {
-                    whitelist.bList.Nodes["Other"].Nodes.Add(tagName);
-                }
+                node.Nodes.Clear();
             }
-        }
-
-        public static void XmlRemove()
-        {
-            XmlDocument doc = new XmlDocument();
-            doc.Load(@"C:\Users\steed\Desktop\text.xml");
-            var nodeList = doc.DocumentElement.SelectNodes("/Blacklisted/Website");
-            string category = ""; string site = ""; string tagName = "";
             
             foreach (XmlNode node in nodeList)
             {
-                tagName = node.SelectSingleNode("TagName").InnerText;
-                category = node.SelectSingleNode("Category").InnerText;
+                id = node.SelectSingleNode("ID").InnerText;
                 site = node.SelectSingleNode("URL").InnerText;
+                category = node.SelectSingleNode("Category").InnerText;
 
-                if (category == "Social media")
-                {
-
-                    XmlNodeList nodes = doc.GetElementsByTagName(tagName);
-
-                    node.ParentNode.RemoveChild(node);
-                    doc.Save(@"C:\Users\steed\Desktop\text.xml");
-                }
-                if (category == "Gaming")
-                {
-                    XmlNodeList nodes = doc.GetElementsByTagName(tagName);
-
-                    node.ParentNode.RemoveChild(node);
-                    doc.Save(@"C:\Users\steed\Desktop\text.xml");
-                }
-                if (category == "NSFW")
-                {
-                    XmlNodeList nodes = doc.GetElementsByTagName(tagName);
-
-                    node.ParentNode.RemoveChild(node);
-                    doc.Save(@"C:\Users\steed\Desktop\text.xml");
-                }
-                if (category == "Other")
-                {
-                    XmlNodeList nodes = doc.GetElementsByTagName(tagName);
-
-                    node.ParentNode.RemoveChild(node);
-                    doc.Save(@"C:\Users\steed\Desktop\text.xml");
-                }
-                MessageBox.Show("You hav removed '" + site + "' from being blacklisted");
+                whitelist.BlackListView.Nodes[category].Nodes.Add(id, site);
             }
         }
-        
+
+        public static async Task<bool> XmlRemove(TreeNode treeNode)
+        {
+            return await Database.WhitelistWebsiteAsync(treeNode.Name).ContinueWith(task =>
+            {
+                string result = task.Result;
+                bool res = Boolean.Parse(result.ToString());
+                if (res)
+                {
+                    MessageBox.Show("You have removed '" + treeNode.Text + "' from being blacklisted");
+                }
+                else
+                {
+                    MessageBox.Show("An error occurred. The site '" + treeNode.Text + "' was not removed from the blacklist.");
+                }
+                return res;
+            });
+        }
+
     }
 }

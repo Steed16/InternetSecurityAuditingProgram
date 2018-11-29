@@ -1,6 +1,6 @@
 ﻿namespace ComputerNetworks
 {
-    partial class Form1
+    partial class PowerScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -37,41 +37,45 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(378, 263);
+            this.button1.Location = new System.Drawing.Point(284, 214);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 41);
+            this.button1.Size = new System.Drawing.Size(77, 33);
             this.button1.TabIndex = 0;
             this.button1.Text = "More";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button_1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(378, 310);
+            this.button2.Location = new System.Drawing.Point(284, 252);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 41);
+            this.button2.Size = new System.Drawing.Size(77, 33);
             this.button2.TabIndex = 1;
             this.button2.Text = "Less";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button_2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(377, 357);
+            this.button3.Location = new System.Drawing.Point(283, 290);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 42);
+            this.button3.Size = new System.Drawing.Size(78, 34);
             this.button3.TabIndex = 2;
             this.button3.Text = "Options";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button_3_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 18);
+            this.label1.Location = new System.Drawing.Point(78, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(754, 126);
+            this.label1.Size = new System.Drawing.Size(603, 102);
             this.label1.TabIndex = 3;
             this.label1.Text = "Hello Human! \r\nWelcome to the PowerScreen!";
             // 
@@ -79,24 +83,28 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(212, 164);
+            this.label2.Location = new System.Drawing.Point(159, 133);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(487, 72);
+            this.label2.Size = new System.Drawing.Size(392, 58);
             this.label2.TabIndex = 4;
             this.label2.Text = "Would you like to make the internet \r\nmore or less fun???";
             // 
-            // Form1
+            // PowerScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 546);
+            this.ClientSize = new System.Drawing.Size(707, 444);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "PowerScreen";
+            this.Text = "PowerScreen";
             this.ResumeLayout(false);
             this.PerformLayout();
 
