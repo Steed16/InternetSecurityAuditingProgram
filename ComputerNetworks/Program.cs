@@ -1,5 +1,7 @@
 ﻿using System;
-using System.Threading;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ComputerNetworks
@@ -12,10 +14,6 @@ namespace ComputerNetworks
         [STAThread]
         static void Main()
         {
-            new Thread(() => {
-                new Monitor();
-            }).Start();
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PowerScreen());
