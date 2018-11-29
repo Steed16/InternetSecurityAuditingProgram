@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.WebApi.Client;
 
 
 
+
+
 namespace ComputerNetworks
 {
     internal class WebMethods
@@ -48,6 +50,7 @@ namespace ComputerNetworks
                 }
                 else
                 {
+                    Console.WriteLine(result);
                     MessageBox.Show("An error occurred. The site '" + treeNode.Text + "' was not removed from the blacklist.");
                 }
                 return res;

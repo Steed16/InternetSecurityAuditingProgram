@@ -31,6 +31,16 @@ bld/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
+.vs/ComputerNetworks/v15/
+ComputerNetworks/bin/Debug/
+ComputerNetworks/obj/Debug/
+*.cache
+*.ide
+*.ide-shm
+*.ide-wal
+*.pdb
+*.suo
+*.exe
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -353,3 +363,6 @@ ASALocalRun/
 
 
 # End of https://www.gitignore.io/api/visualstudiocode
+.vs/ComputerNetworks/v15/.suo
+.vs/ComputerNetworks/v15/Server/sqlite3/storage.ide-shm
+.vs/ComputerNetworks/v15/Server/sqlite3/storage.ide-wal

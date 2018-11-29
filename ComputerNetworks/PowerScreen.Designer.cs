@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // button1
@@ -90,6 +92,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Would you like to make the internet \r\nmore or less fun???";
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.BalloonTipText = "Power Screen";
+            this.notifyIcon.BalloonTipTitle = "Power Screen Title";
+            this.notifyIcon.Text = "Power Screen";
+            // 
             // PowerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,6 +113,8 @@
             this.MinimizeBox = false;
             this.Name = "PowerScreen";
             this.Text = "PowerScreen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PowerScreen_FormClosing);
+            this.Resize += new System.EventHandler(this.PowerScreen_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,6 +127,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
     }
 }
 
