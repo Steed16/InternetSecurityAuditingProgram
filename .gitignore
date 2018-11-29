@@ -363,3 +363,6 @@ ASALocalRun/
 
 
 # End of https://www.gitignore.io/api/visualstudiocode
+.vs/ComputerNetworks/v15/.suo
+.vs/ComputerNetworks/v15/Server/sqlite3/storage.ide-shm
+.vs/ComputerNetworks/v15/Server/sqlite3/storage.ide-wal
