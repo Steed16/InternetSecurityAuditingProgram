@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Social media");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Gaming");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("NSFW");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Other");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Social media");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Gaming");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("NSFW");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Other");
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -64,23 +64,23 @@
             this.treeView1.Location = new System.Drawing.Point(199, 201);
             this.treeView1.Margin = new System.Windows.Forms.Padding(2);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Social media";
-            treeNode1.Tag = "parent";
-            treeNode1.Text = "Social media";
-            treeNode2.Name = "Gaming";
-            treeNode2.Tag = "parent";
-            treeNode2.Text = "Gaming";
-            treeNode3.Name = "NSFW";
-            treeNode3.Tag = "parent";
-            treeNode3.Text = "NSFW";
-            treeNode4.Name = "Other";
-            treeNode4.Tag = "parent";
-            treeNode4.Text = "Other";
+            treeNode9.Name = "Social media";
+            treeNode9.Tag = "parent";
+            treeNode9.Text = "Social media";
+            treeNode10.Name = "Gaming";
+            treeNode10.Tag = "parent";
+            treeNode10.Text = "Gaming";
+            treeNode11.Name = "NSFW";
+            treeNode11.Tag = "parent";
+            treeNode11.Text = "NSFW";
+            treeNode12.Name = "Other";
+            treeNode12.Tag = "parent";
+            treeNode12.Text = "Other";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4});
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12});
             this.treeView1.Size = new System.Drawing.Size(183, 122);
             this.treeView1.TabIndex = 3;
             this.treeView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.RemoveFromBlacklist);
@@ -93,10 +93,12 @@
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "whitelist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Whitelist";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);

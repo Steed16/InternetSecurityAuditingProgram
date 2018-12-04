@@ -13,6 +13,19 @@ namespace ComputerNetworks
             client.DefaultRequestHeaders.Add("X-PowerScreen", "1");
 
             InitializeComponent();
+            notifyIcon = new NotifyIcon()
+            {
+                Icon = System.Drawing.Icon.ExtractAssociatedIcon(Application.ExecutablePath),
+                ContextMenu = new ContextMenu(new MenuItem[] {
+                    new MenuItem("Open", OpenThisBoy)
+                    }),
+                Visible = false
+            };
+        }
+
+        public void OpenThisBoy(object sender, EventArgs e)
+        {
+            this.Show();
         }
 
         public static string ButtonClicked = "";
@@ -42,10 +55,9 @@ namespace ComputerNetworks
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 notifyIcon.Visible = true;
-                notifyIcon.ShowBalloonTip(500);
                 this.Hide();
-                e.Cancel = true;
             }
+            e.Cancel = true;
         }
 
         private void PowerScreen_Resize(object sender, EventArgs e)
@@ -53,13 +65,17 @@ namespace ComputerNetworks
             if (FormWindowState.Minimized == this.WindowState)
             {
                 notifyIcon.Visible = true;
-                notifyIcon.ShowBalloonTip(500);
                 this.Hide();
             }
             else if (FormWindowState.Normal == this.WindowState)
             {
                 notifyIcon.Visible = false;
             }
+        }
+
+        private void PowerScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

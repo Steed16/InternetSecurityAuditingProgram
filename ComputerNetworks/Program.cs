@@ -22,6 +22,8 @@ namespace ComputerNetworks
                 ConsoleHelper.DisableQuickEditMode();
             }
 
+            // Proteccccc.Protect();
+
             // Start proxy controller
             controller.StartProxy();
 

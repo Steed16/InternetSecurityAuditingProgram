@@ -72,6 +72,7 @@
     <Compile Include="PowerScreen.Designer.cs">
       <DependentUpon>PowerScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Protecccccc.cs" />
     <Compile Include="ProxyTestController.cs" />
     <Compile Include="WebMethods.cs" />
     <Compile Include="whitelist.cs">

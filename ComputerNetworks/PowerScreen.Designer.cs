@@ -108,12 +108,15 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PowerScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PowerScreen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PowerScreen_FormClosing);
+            this.Load += new System.EventHandler(this.PowerScreen_Load);
             this.Resize += new System.EventHandler(this.PowerScreen_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
