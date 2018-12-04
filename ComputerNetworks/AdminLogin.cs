@@ -37,10 +37,8 @@ namespace ComputerNetworks
             }
             else
             {
-                SoundPlayer player = new SoundPlayer();
-                player.Stop();
-                player.SoundLocation = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Noot_Noot.wav";
-                player.Play();
+                SoundPlayer audio = new SoundPlayer(Properties.Resources.Noot_Noot);
+                audio.Play();
                 MessageBox.Show("Incorrect Username or Password");
                 
             }

@@ -56,8 +56,12 @@ namespace ComputerNetworks
             {
                 notifyIcon.Visible = true;
                 this.Hide();
+                e.Cancel = true;
             }
-            e.Cancel = true;
+            else
+            {
+                e.Cancel = true;
+            }
         }
 
         private void PowerScreen_Resize(object sender, EventArgs e)
