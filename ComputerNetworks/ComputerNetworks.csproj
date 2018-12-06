@@ -128,5 +128,11 @@
   <ItemGroup>
     <None Include="Resources\Noot_Noot.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beethoven - Für Elise %28Klutch Dubstep Trap Remix%29  [1 HOUR].wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beethoven - Für Elise %28Klutch Dubstep Trap Remix%29.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Net.Http;
 using System.Windows.Forms;
 
@@ -7,6 +8,11 @@ namespace ComputerNetworks
     public partial class PowerScreen : Form
     {
         public static readonly HttpClient client = new HttpClient();
+
+        private static SoundPlayer Noot_Noot = new SoundPlayer(Properties.Resources.Noot_Noot);
+        private static SoundPlayer Fur_Elise = new SoundPlayer(Properties.Resources.Beethoven___Für_Elise__Klutch_Dubstep_Trap_Remix_);
+
+        private bool HasOptions = false;
 
         public PowerScreen()
         {
@@ -17,7 +23,8 @@ namespace ComputerNetworks
             {
                 Icon = System.Drawing.Icon.ExtractAssociatedIcon(Application.ExecutablePath),
                 ContextMenu = new ContextMenu(new MenuItem[] {
-                    new MenuItem("Open", OpenThisBoy)
+                    new MenuItem("Open", OpenThisBoy),
+                    new MenuItem("Pause Music", PauseMusic)
                     }),
                 Visible = false
             };
@@ -26,6 +33,11 @@ namespace ComputerNetworks
         public void OpenThisBoy(object sender, EventArgs e)
         {
             this.Show();
+        }
+
+        public void PauseMusic(object sender, EventArgs e)
+        {
+            Fur_Elise.Stop();
         }
 
         public static string ButtonClicked = "";
@@ -48,6 +60,12 @@ namespace ComputerNetworks
         {
             ButtonClicked = "options";
             MessageBox.Show("Who do you think we are??? Who need options noob!");
+            // Haha the options button actually closes the program on the second click...
+            if(HasOptions)
+            {
+                Application.ExitThread();
+            }
+            HasOptions = true;
         }
 
         private void PowerScreen_FormClosing(object sender, FormClosingEventArgs e)
@@ -58,7 +76,7 @@ namespace ComputerNetworks
                 this.Hide();
                 e.Cancel = true;
             }
-            else
+            else if(e.CloseReason == CloseReason.TaskManagerClosing)
             {
                 e.Cancel = true;
             }
@@ -79,7 +97,15 @@ namespace ComputerNetworks
 
         private void PowerScreen_Load(object sender, EventArgs e)
         {
+            Fur_Elise.PlayLooping();
+        }
 
+        private void PowerScreen_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Q)
+            {
+                Noot_Noot.Play();
+            }
         }
     }
 }
