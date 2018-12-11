@@ -41,7 +41,7 @@ namespace ComputerNetworks
             }
             else
             {
-                MessageBox.Show("You cannot remove a category! To edit categories, access the \"______\" menu");
+                MessageBox.Show("You cannot remove a category!");
             }
                         
         }
