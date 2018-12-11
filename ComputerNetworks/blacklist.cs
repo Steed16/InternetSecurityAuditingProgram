@@ -23,6 +23,8 @@ namespace ComputerNetworks
                 if (res)
                 {
                     MessageBox.Show("You Blacklisted '" + site + "' under the category " + category);
+                    tagNameInput.Invoke(new Action(() => tagNameInput.Text = "Enter TagName Here"));
+                    blacklistSiteTextBox.Invoke(new Action(() => blacklistSiteTextBox.Text = "Enter URL Here"));
                 }
                 else
                 {
@@ -34,8 +36,12 @@ namespace ComputerNetworks
 
         private void Blacklist_Load(object sender, EventArgs e)
         {
+            Random rnd = new Random();
+            int RandomFactNum = rnd.Next(0, RandomFactList.FactArray.Length);
             whitelist.BlackListView = treeView1;
+            RandomFactText.Text = RandomFactList.FactArray[RandomFactNum];
             WebMethods.XmlReader();
+
         }
 
         private void RadioButton_CheckedChanged(object sender, EventArgs e)

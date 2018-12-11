@@ -45,7 +45,7 @@ namespace ComputerNetworks
                 bool res = Boolean.Parse(result.ToString());
                 if (res)
                 {
-                    MessageBox.Show("You have removed '" + treeNode.Text + "' from being blacklisted");
+                    MessageBox.Show("You have removed '" + treeNode.Text + "' from being the blacklist. You may now access "  + treeNode.Text);
                 }
                 else
                 {
