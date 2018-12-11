@@ -64,6 +64,7 @@
     <Compile Include="AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="RandomFactList.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Helpers\ConsoleHelper.cs" />
     <Compile Include="PowerScreen.cs">
@@ -133,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Beethoven - Für Elise %28Klutch Dubstep Trap Remix%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PowerScreenBgImg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

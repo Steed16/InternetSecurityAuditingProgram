@@ -7,7 +7,7 @@ namespace ComputerNetworks
     {
 
         public static TreeView BlackListView = new TreeView();
-        
+        public string RandomFactGenerator = "";
 
         public whitelist()
         {
@@ -21,7 +21,10 @@ namespace ComputerNetworks
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            Random rnd = new Random();
+            int RandomFactNum = rnd.Next(1, 1000);
             BlackListView = treeView1;
+            RandomFactText.Text = RandomFactGenerator;
             WebMethods.XmlReader();
         }
 
@@ -41,6 +44,11 @@ namespace ComputerNetworks
                 MessageBox.Show("You cannot remove a category! To edit categories, access the \"______\" menu");
             }
                         
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

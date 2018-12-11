@@ -77,5 +77,15 @@ namespace ComputerNetworks.Properties {
                 return ResourceManager.GetStream("Noot_Noot", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PowerScreenBgImg {
+            get {
+                object obj = ResourceManager.GetObject("PowerScreenBgImg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
