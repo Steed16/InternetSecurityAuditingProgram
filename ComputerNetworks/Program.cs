@@ -9,6 +9,7 @@ namespace ComputerNetworks
 
     static class Program
     {
+
         private static readonly ProxyTestController controller = new ProxyTestController();
         /// <summary>
         /// The main entry point for the application.
@@ -16,6 +17,8 @@ namespace ComputerNetworks
         [STAThread]
         static void Main()
         {
+            RandomFactList.MakeTheRandomFactList();
+
             if (RunTime.IsWindows)
             {
                 // fix console hang due to QuickEdit mode
