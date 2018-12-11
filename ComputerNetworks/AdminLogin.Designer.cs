@@ -64,7 +64,7 @@
             // 
             this.submit.BackColor = System.Drawing.Color.Magenta;
             this.submit.Location = new System.Drawing.Point(249, 270);
-            this.submit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.submit.Margin = new System.Windows.Forms.Padding(2);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(97, 31);
             this.submit.TabIndex = 2;
@@ -78,11 +78,11 @@
             this.textUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textUsername.ForeColor = System.Drawing.Color.SpringGreen;
             this.textUsername.Location = new System.Drawing.Point(249, 132);
-            this.textUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textUsername.Margin = new System.Windows.Forms.Padding(2);
             this.textUsername.MaximumSize = new System.Drawing.Size(151, 40);
             this.textUsername.MinimumSize = new System.Drawing.Size(151, 40);
             this.textUsername.Name = "textUsername";
-            this.textUsername.Size = new System.Drawing.Size(151, 40);
+            this.textUsername.Size = new System.Drawing.Size(151, 32);
             this.textUsername.TabIndex = 3;
             // 
             // textPassword
@@ -91,7 +91,7 @@
             this.textPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPassword.ForeColor = System.Drawing.Color.DeepPink;
             this.textPassword.Location = new System.Drawing.Point(249, 188);
-            this.textPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textPassword.MaximumSize = new System.Drawing.Size(151, 40);
             this.textPassword.MinimumSize = new System.Drawing.Size(151, 40);
             this.textPassword.Name = "textPassword";
@@ -124,9 +124,9 @@
             this.Controls.Add(this.Password);
             this.Controls.Add(this.username);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminLogin";
             this.ResumeLayout(false);
             this.PerformLayout();
