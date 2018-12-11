@@ -44,6 +44,8 @@
             this.nsfwRadio = new System.Windows.Forms.RadioButton();
             this.otherRadio = new System.Windows.Forms.RadioButton();
             this.selectedCategory = new System.Windows.Forms.TextBox();
+            this.RandomFactText = new System.Windows.Forms.Label();
+            this.RandomFactLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -205,12 +207,35 @@
             this.selectedCategory.Text = "Other";
             this.selectedCategory.Visible = false;
             // 
+            // RandomFactText
+            // 
+            this.RandomFactText.AutoEllipsis = true;
+            this.RandomFactText.AutoSize = true;
+            this.RandomFactText.Location = new System.Drawing.Point(37, 470);
+            this.RandomFactText.Name = "RandomFactText";
+            this.RandomFactText.Size = new System.Drawing.Size(369, 13);
+            this.RandomFactText.TabIndex = 17;
+            this.RandomFactText.Text = "RandomFactWillBeGeneratedHereAndHopefullyThisIsALongEnoughTextBox";
+            this.RandomFactText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RandomFactLabel
+            // 
+            this.RandomFactLabel.AutoSize = true;
+            this.RandomFactLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RandomFactLabel.Location = new System.Drawing.Point(37, 444);
+            this.RandomFactLabel.Name = "RandomFactLabel";
+            this.RandomFactLabel.Size = new System.Drawing.Size(208, 16);
+            this.RandomFactLabel.TabIndex = 18;
+            this.RandomFactLabel.Text = "And here\'s a random fun fact:";
+            // 
             // blacklist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lime;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(600, 501);
+            this.Controls.Add(this.RandomFactLabel);
+            this.Controls.Add(this.RandomFactText);
             this.Controls.Add(this.selectedCategory);
             this.Controls.Add(this.otherRadio);
             this.Controls.Add(this.nsfwRadio);
@@ -249,5 +274,7 @@
         private System.Windows.Forms.RadioButton nsfwRadio;
         private System.Windows.Forms.RadioButton otherRadio;
         private System.Windows.Forms.TextBox selectedCategory;
+        private System.Windows.Forms.Label RandomFactText;
+        private System.Windows.Forms.Label RandomFactLabel;
     }
 }
