@@ -130,8 +130,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.label2);
+            this.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ForeColor = System.Drawing.Color.Red;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
