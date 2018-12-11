@@ -36,7 +36,10 @@ namespace ComputerNetworks
             {
                 WebMethods.XmlRemove(treeNode).ContinueWith(res =>
                  {
-                     if (res.Result) BlackListView.Nodes.Remove(treeNode);
+                     if (res.Result)
+                     {
+                         BlackListView.Invoke(new Action(() => BlackListView.Nodes.Remove(treeNode)));
+                     }
                  });
             }
             else
