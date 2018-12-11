@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Social media");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Gaming");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("NSFW");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Other");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Social media");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Gaming");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("NSFW");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Other");
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.blacklistSiteTextBox = new System.Windows.Forms.TextBox();
@@ -75,7 +75,7 @@
             // 
             this.blacklistSiteTextBox.BackColor = System.Drawing.Color.Fuchsia;
             this.blacklistSiteTextBox.Location = new System.Drawing.Point(40, 211);
-            this.blacklistSiteTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.blacklistSiteTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.blacklistSiteTextBox.Multiline = true;
             this.blacklistSiteTextBox.Name = "blacklistSiteTextBox";
             this.blacklistSiteTextBox.Size = new System.Drawing.Size(209, 33);
@@ -97,25 +97,25 @@
             // 
             this.treeView1.BackColor = System.Drawing.Color.Fuchsia;
             this.treeView1.Location = new System.Drawing.Point(214, 310);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(2);
             this.treeView1.Name = "treeView1";
-            treeNode5.Name = "Social media";
-            treeNode5.Tag = "parent";
-            treeNode5.Text = "Social media";
-            treeNode6.Name = "Gaming";
-            treeNode6.Tag = "parent";
-            treeNode6.Text = "Gaming";
-            treeNode7.Name = "NSFW";
-            treeNode7.Tag = "parent";
-            treeNode7.Text = "NSFW";
-            treeNode8.Name = "Other";
-            treeNode8.Tag = "parent";
-            treeNode8.Text = "Other";
+            treeNode1.Name = "Social media";
+            treeNode1.Tag = "parent";
+            treeNode1.Text = "Social media";
+            treeNode2.Name = "Gaming";
+            treeNode2.Tag = "parent";
+            treeNode2.Text = "Gaming";
+            treeNode3.Name = "NSFW";
+            treeNode3.Tag = "parent";
+            treeNode3.Text = "NSFW";
+            treeNode4.Name = "Other";
+            treeNode4.Tag = "parent";
+            treeNode4.Text = "Other";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8});
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4});
             this.treeView1.Size = new System.Drawing.Size(183, 122);
             this.treeView1.TabIndex = 8;
             // 
@@ -123,7 +123,7 @@
             // 
             this.blacklistButton.BackColor = System.Drawing.Color.Fuchsia;
             this.blacklistButton.Location = new System.Drawing.Point(466, 184);
-            this.blacklistButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.blacklistButton.Margin = new System.Windows.Forms.Padding(2);
             this.blacklistButton.Name = "blacklistButton";
             this.blacklistButton.Size = new System.Drawing.Size(83, 33);
             this.blacklistButton.TabIndex = 10;
@@ -136,7 +136,7 @@
             this.tagNameInput.BackColor = System.Drawing.Color.Fuchsia;
             this.tagNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tagNameInput.Location = new System.Drawing.Point(40, 158);
-            this.tagNameInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tagNameInput.Margin = new System.Windows.Forms.Padding(2);
             this.tagNameInput.MaximumSize = new System.Drawing.Size(209, 40);
             this.tagNameInput.MinimumSize = new System.Drawing.Size(209, 40);
             this.tagNameInput.Name = "tagNameInput";
@@ -232,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(600, 501);
             this.Controls.Add(this.RandomFactLabel);
             this.Controls.Add(this.RandomFactText);
@@ -249,11 +249,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "blacklist";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blacklist";
             this.Load += new System.EventHandler(this.Blacklist_Load);
             this.ResumeLayout(false);
