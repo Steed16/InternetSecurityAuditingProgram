@@ -22,9 +22,9 @@ namespace ComputerNetworks
         private void Form2_Load(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            int RandomFactNum = rnd.Next(1, 1000);
+            int RandomFactNum = rnd.Next(0, RandomFactList.FactArray.Length);
             BlackListView = treeView1;
-            RandomFactText.Text = RandomFactGenerator;
+            RandomFactText.Text = RandomFactList.FactArray[RandomFactNum];
             WebMethods.XmlReader();
         }
 
