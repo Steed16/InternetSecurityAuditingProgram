@@ -128,6 +128,10 @@ namespace ComputerNetworks
             proxyServer.ClientCertificateSelectionCallback -= OnCertificateSelection;
 
             proxyServer.Stop();
+            if (RunTime.IsWindows)
+            {
+                proxyServer.DisableSystemProxy(ProxyProtocolType.AllHttp);
+            }
 
             // remove the generated certificates
             //proxyServer.CertificateManager.RemoveTrustedRootCertificates();

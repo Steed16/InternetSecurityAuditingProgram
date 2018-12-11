@@ -122,6 +122,7 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PowerScreen";
@@ -129,6 +130,7 @@
             this.Text = "PowerScreen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PowerScreen_FormClosing);
             this.Load += new System.EventHandler(this.PowerScreen_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PowerScreen_KeyDown);
             this.Resize += new System.EventHandler(this.PowerScreen_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();

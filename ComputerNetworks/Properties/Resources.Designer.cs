@@ -63,6 +63,15 @@ namespace ComputerNetworks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Beethoven___Für_Elise__Klutch_Dubstep_Trap_Remix_ {
+            get {
+                return ResourceManager.GetStream("Beethoven___Für_Elise__Klutch_Dubstep_Trap_Remix_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream Noot_Noot {
             get {
                 return ResourceManager.GetStream("Noot_Noot", resourceCulture);
