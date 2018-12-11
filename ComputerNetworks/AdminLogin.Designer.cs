@@ -40,7 +40,7 @@
             // 
             this.username.AutoSize = true;
             this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(161, 163);
+            this.username.Location = new System.Drawing.Point(161, 162);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(147, 31);
             this.username.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             this.Password.AutoSize = true;
             this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(166, 231);
+            this.Password.Location = new System.Drawing.Point(165, 231);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(142, 31);
             this.Password.TabIndex = 1;
@@ -59,31 +59,34 @@
             // submit
             // 
             this.submit.Location = new System.Drawing.Point(332, 332);
+            this.submit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(129, 38);
             this.submit.TabIndex = 2;
             this.submit.Text = "Submit Dat Boi";
             this.submit.UseVisualStyleBackColor = true;
-            this.submit.Click += new System.EventHandler(this.submit_Click);
+            this.submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // textUsername
             // 
             this.textUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textUsername.Location = new System.Drawing.Point(332, 163);
+            this.textUsername.Location = new System.Drawing.Point(332, 162);
+            this.textUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textUsername.MaximumSize = new System.Drawing.Size(200, 40);
             this.textUsername.MinimumSize = new System.Drawing.Size(200, 40);
             this.textUsername.Name = "textUsername";
-            this.textUsername.Size = new System.Drawing.Size(200, 40);
+            this.textUsername.Size = new System.Drawing.Size(200, 38);
             this.textUsername.TabIndex = 3;
             // 
             // textPassword
             // 
             this.textPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPassword.Location = new System.Drawing.Point(332, 231);
+            this.textPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textPassword.MaximumSize = new System.Drawing.Size(200, 40);
             this.textPassword.MinimumSize = new System.Drawing.Size(200, 40);
             this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(200, 40);
+            this.textPassword.Size = new System.Drawing.Size(200, 38);
             this.textPassword.TabIndex = 4;
             this.textPassword.UseSystemPasswordChar = true;
             // 
@@ -91,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(290, 40);
+            this.label1.Location = new System.Drawing.Point(290, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(242, 46);
             this.label1.TabIndex = 5;
@@ -101,6 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textPassword);
@@ -108,7 +112,10 @@
             this.Controls.Add(this.submit);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.username);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AdminLogin";
             this.ResumeLayout(false);
             this.PerformLayout();

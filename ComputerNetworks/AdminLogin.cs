@@ -18,17 +18,17 @@ namespace ComputerNetworks
             InitializeComponent();
         }
         
-        private void submit_Click(object sender, EventArgs e)
+        private void Submit_Click(object sender, EventArgs e)
         {
             if (textUsername.Text == "Admin" && textPassword.Text == "admin1")
             {
                 ActiveForm.Close();
-                if (Form1.whichOne == "blacklist")
+                if (PowerScreen.ButtonClicked == "blacklist")
                 {
                     blacklist blackForm = new blacklist();
                     blackForm.Show();
                 }
-                else if (Form1.whichOne == "whitelist")
+                else if (PowerScreen.ButtonClicked == "whitelist")
                 {
                     whitelist whiteForm = new whitelist();
                     whiteForm.Show();
@@ -37,10 +37,8 @@ namespace ComputerNetworks
             }
             else
             {
-                SoundPlayer player = new SoundPlayer();
-                player.Stop();
-                player.SoundLocation = @"C:\Users\steed\Downloads\Noot Noot.wav";
-                player.Play();
+                SoundPlayer audio = new SoundPlayer(Properties.Resources.Noot_Noot);
+                audio.Play();
                 MessageBox.Show("Incorrect Username or Password");
                 
             }
