@@ -8,7 +8,7 @@ namespace ComputerNetworks
 {
     public static class RandomFactList
     {
-        List<string>, <int> FactArray = new List<string, int> { };
+      
 
 
     }

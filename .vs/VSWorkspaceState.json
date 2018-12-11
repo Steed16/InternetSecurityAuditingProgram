@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ComputerNetworks",
+    "\\ComputerNetworks\\Properties",
+    "\\ComputerNetworks\\Resources"
   ],
+  "SelectedNode": "\\ComputerNetworks\\AdminLogin.resx",
   "PreviewInSolutionExplorer": false
 }
