@@ -35,3 +35,16 @@ C:\Users\Steed16\Source\Repos\InternetSecurityAuditingProgram\ComputerNetworks\o
 C:\Users\Steed16\Source\Repos\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.exe
 C:\Users\Steed16\Source\Repos\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.pdb
 C:\Users\steed\Source\Repos\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.AdminLogin.resources
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\bin\Debug\ComputerNetworks.exe.config
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\bin\Debug\ComputerNetworks.exe
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\bin\Debug\ComputerNetworks.pdb
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.csprojAssemblyReference.cache
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.AdminLogin.resources
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.Form1.resources
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.whitelist.resources
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.blacklist.resources
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.Properties.Resources.resources
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.csproj.GenerateResource.cache
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.csproj.CoreCompileInputs.cache
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.exe
+C:\Users\oddei\Google Drive\college\CSC 225\InternetSecurityAuditingProgram\ComputerNetworks\obj\Debug\ComputerNetworks.pdb
