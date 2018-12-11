@@ -23,6 +23,8 @@ namespace ComputerNetworks
                 if (res)
                 {
                     MessageBox.Show("You Blacklisted '" + site + "' under the category " + category);
+                    tagNameInput.Invoke(new Action(() => tagNameInput.Text = "Enter TagName Here"));
+                    blacklistSiteTextBox.Invoke(new Action(() => blacklistSiteTextBox.Text = "Enter URL Here"));
                 }
                 else
                 {
